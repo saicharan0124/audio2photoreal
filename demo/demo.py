@@ -242,7 +242,7 @@ gradio_model = GradioModel(
 demo = gr.Interface(
     audio_to_avatar,  # function
     [
-        gr.Audio(sources=["microphone"]),
+        gr.Audio(source="upload", type="file"),
         gr.Number(
             value=3,
             label="Number of Samples (default = 3)",
